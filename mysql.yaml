@@ -1,6 +1,6 @@
 ---
 - name: Install MySQL
-  hosts: 172.16.0.242 # Replace with your target host group or hosts
+  hosts: 172.16.0.238 # Replace with your target host group or hosts
   become: yes  # Use sudo or become_method if needed
 
   tasks:
