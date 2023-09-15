@@ -1,0 +1,17 @@
+---
+- name: Install MySQL
+  hosts: 172.16.0.242 # Replace with your target host group or hosts
+  become: yes  # Use sudo or become_method if needed
+
+  tasks:
+    - name: Install MySQL Server
+      apt:
+        name: mysql-server
+        state: present  # Ensure MySQL is installed on Debian/Ubuntu systems
+      when: ansible_os_family == 'Debian'
+
+    - name: Install MySQL Server
+      yum:
+        name: mysql-server
+        state: present  # Ensure MySQL is installed on CentOS/RHEL systems
+      when: ansible_os_family == 'RedHat'
