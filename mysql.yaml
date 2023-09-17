@@ -1,6 +1,6 @@
 ---
 - name: Install Nginx
-  hosts: 172.16.0.242
+  hosts: 192.168.151.41
   become: yes
 
   tasks:
